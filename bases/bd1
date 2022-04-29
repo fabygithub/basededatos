@@ -17,4 +17,11 @@ ciudad varchar(15) not null DEFAULT '',
 region varchar(15) not null DEFAULT '',
 codigoPostal varchar(10) not null DEFAULT '',
 pais varchar(15) not null DEFAULT '',
-
+telefono varchar(24) not null DEFAULT '',
+fax varchar(24) not null DEFAULT '',
+PRIMARY KEY idCliente,
+KEY idx_Clientes_company_name(nombreCompania),
+KEY idx_Clientes_ciudad(ciudad),
+KEY idx_Clientes_region(region),
+KEY idx_Clientes_codigoPostal(codigoPostal),
+)ENGINE 
