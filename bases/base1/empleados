@@ -1,0 +1,25 @@
+CREATE TABLE empleados(
+    idEmpleado int(10) unsigned NOT null AUTO_INCREMENT,
+    apellido varchar(20) NOT null DEFAULT '',
+    nombre varchar(10) NOT null DEFAULT '',
+    cargo varchar(30) NOT null DEFAULT '',
+    tratamiento varchar(25) NOT null DEFAULT '',
+    fechaNacimiento datetime NOT null,
+    fechaContratacion datetime NOT null,
+    direccion varchar(60) NOT null DEFAULT '',
+    ciudad varchar(15) NOT null DEFAULT '',
+    region varchar(15) NOT null DEFAULT '',
+    codigoPostal varchar(10) NOT null DEFAULT '',
+    pais varchar(15) NOT null DEFAULT '',
+    telefonoDomicilio varchar(24) NOT null DEFAULT '',
+    extension varchar(4) NOT null DEFAULT '',
+    foto varchar(50) NOT null DEFAULT '',
+    notas mediumtext,
+    jefe int(10) unsigned DEFAULT null,
+    PRIMARY KEY (idEmpleado),
+    KEY idx_empleados_apellido(apellido),
+    KEY idx_empleados_codigoPostal(codigoPostal),
+    KEY idx_jefe(jefe),
+    CONSTRAINT Fk_empleados_reports_to foreign key (jefe) REFERENCES empleados(idEmpleado)
+    )ENGINE=INNODB AUTO_INCREMENT = 10 DEFAULT charset=utf8;
+    
