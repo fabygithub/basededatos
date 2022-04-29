@@ -1,0 +1,6 @@
+CREATE TABLE companiasEnvios(
+    idCompaniaEnvio int(10) unsigned NOT null AUTO_INCREMENT,
+    nombreCompania int(40) NOT null DEFAULT '',
+    telefono varchar(24) NOT null DEFAULT '',
+    PRIMARY KEY (idCompaniaEnvio)
+    )ENGINE=INNODB AUTO_INCREMENT = 4 DEFAULT charset=utf8;
