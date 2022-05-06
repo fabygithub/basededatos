@@ -23,4 +23,68 @@ root 127.0.0.1
 necesita contraseña
 
 
+descargar phpmyadming 
+se guarda en el escritorio
+
+la carpeta phpmyadmin copiarla
+en xammp htdocs
+
+ingresar a 
+localhost
+localhost/xampp/
+
+ingresar a la carpeta
+
+localhost/phpMyAdmin/
+
+ahi que ingresar un root
+y una contraseña
+
+en la pantalla de inicio puedes
+ver las bases de datos creadas
+
+puedes finalizar sesion e ingresar de nuevo
+
+arriba aparecen los directorios
+por ejemplo si selecciona la ba cm
+
+localhost -> cm
+
+en base de datos
+crear una nueva base de datos
+
+nombre:
+cotejamiento : utf8_spanish_ci
+
+selecciona la base de datos
+tienes que crear las tablas
+
+puedes ver los privilegios de la base
+de datos
+
+hay 2 usuarios root
+puedes agregar un nuevo usuario
+
+nombre de usuario : usuariob
+servidor : local : localhost
+contraseña : crear una contraseña
+
+base de datos para el usuario :
+se le otorgan todos los privilegios 
+de la base de datos cm
+
+limite de recursos
+maximo de consultas por hora : 0
+maximo de actualizacion por hora : 0
+maximo de conexiones por hora : 0
+maximo usuario conexiones : 0
+
+CREATE
+GRANT
+USAGE ON*.*
+TO
+
+
+
+
 
