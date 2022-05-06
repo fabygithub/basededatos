@@ -80,9 +80,93 @@ maximo de conexiones por hora : 0
 maximo usuario conexiones : 0
 
 CREATE
+The CREATE TABLE statement is used 
+to create a new table in a database.
+
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+
+
 GRANT
+El comando GRANT permite asignar accesos 
+por usuario sobre una o más tablas
+
+por ejemplo si tiene todos los privilegios
+SQL SELECT, UPDATE, 
+INSERT, DELETE 
+y otros en tablas o vistas
+
 USAGE ON*.*
+
 TO
+asignar a cual 
+usuario
+
+ahora puede cerrar sesion 
+e ingresar con el usuario
+
+seleccionar la base de datos cm
+crear una tabla
+
+nombre tabla : cliente
+numero columnas : 5
+
+nombredecliente   varchar
+guarda caracteres 
+si la cantidad de caracter
+es mayor a 10 usa varchar
+
+hay que darle una longitud 
+por ejemplo 500
+
+comentarios 
+tabla donde almaceno los clientes
+
+motor innodb
+
+guardar
+
+en las tablas hay que definir un indice
+id
+int 
+100
+
+indice 
+primary
+
+y que auto incremente
+
+Auto Increment es una función que opera en tipos de datos numéricos. 
+Genera automáticamente valores numéricos secuenciales 
+cada vez que se inserta un registro en una tabla 
+para un campo definido como incremento automático.
+
+select *
+selecciona todo
+
+limite 0,30
+0 empezando de la fila 0
+hasta la 30
+
+se puede instertar con el formulario
+que tiene la pagina
+
+error #1142  acceso denegado para instertar crminvitado
+
+ERROR 1142 (42000): INSERT command denied to user 'wwt'@'localhost' for table ... 
+Se encuentra que el usuario wwt no tiene permiso
+
+Dirección URL incorrecta: al igual que el error 404, un error 400 Bad Request 
+se produce cuando los usuarios introducen una dirección incorrecta y, 
+por ejemplo, insertan caracteres especiales ilícitos.
+
+
 
 
 
