@@ -346,6 +346,94 @@ crm.prooveedores
 desde
 crm2.prooveedores
 
+en la opciones de tabla 
+puedo cambiar el noombre de
+tabla
+
+alter table
+edita la tabla
+
+comment 
+se cambio el comentario
+
+en la tabla facturas almaceno
+las facturas
+
+puedo renonbrar la base de datos
+
+puedo copiar la base de datos
+
+puedo copiar solo la estrucutura
+
+puedo exportar la base de datos
+y comprimir en un zip
+
+creo la base de datos 
+crm
+
+y importo
+mi base descargada
+crm.sql
+
+puedo exportar como pdf
+titulo del reporte clientes
+
+se forma una tabla excel
+
+cada motor tiene un funcionamiento
+diferente
+
+para copiar una tabla 
+se asigna clientes en mover
+
+y se copia en copiar tabla
+clientecsv
+
+#1164
+no soporta auto incremento columnas
+
+borrando el id
+el csv funciona
+
+en data estan las bases de datos
+creadas
+
+en el csv se crea un excel
+
+#1062 clave primaria duplicada
+se ingreso 21 y estaba duplicada
+
+hay que dejar vacio porque se incrementa
+solo
+
+en el where se coloca la condicion
+del pais solicitado
+
+el id se puede poner null
+porque se incrementa solo
+
+update actualiza el telefono
+where nombre sea ejemplo
+
+puedo borrar filan con condiciones
+segun el nombre por ejemplo
+
+delete from tabla 
+
+borrar todaas las filas
+
+guardar en el almacenamiento
+del navegador
+
+en preferencias se configura
+el maximo de bases de datos
+100
+
+el maximo de tablas 250
+
+en csv puedes exportar con opciones
+por ejemplo que termine en ;
+
 
 
 
