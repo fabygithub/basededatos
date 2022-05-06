@@ -191,6 +191,164 @@ ahora puedo cerrar sesion
 y volver i iniciar con el usuario
 nuevo creado
 
+con el numero de pagina 
+puede cambiar las paginas
+
+mostrar horizontal 
+encabezados rotados
+
+puedes poner mostrar
+50 filas
+
+la pagina tiene un formulario
+para buscar
+
+por ejemplo 
+
+poblacion like = inglaterra
+tiene que buscar los resultados exactos
+con inglatera
+
+hola%
+%hola
+
+El operador LIKE permite, junto a un patrón de búsqueda, 
+hallar coincidencias dentro de una cadena. 
+En general: CADENA like 'hola%' -> devuelve cierto si el valor del campo 
+CADENA empieza por "hola" 
+
+CADENA like '%hola' -> devuelve cierto si el valor del campo CADENA 
+termina por "hola"
+
+ejemplo 
+
+%inglat%
+
+si busco inglat
+me va a devolver 0 columnas
+
+por ejemplo
+not like = inglaterra
+
+va a mostrar todos los paises
+que no sean inglaterra
+
+puede ser 2 canpos
+
+nombre like = Jhon
+pais like = Inglaterra
+
+encontro 2 filas
+
+consulta combinada
+
+pais like = Inglaterra
+
+que seleone
+nombre de cliente
+poblacion
+
+pais like = Inglaterra
+
+opciones
+select
+
+nombre
+poblacion
+pais
+
+puedes cambiar los registros por pagina
+por ejemplo 4
+
+puedes filtrar los resultados por ejemplo
+mostrar por id orden ascendente
+
+comienza del 
+id 1
+   2
+   3
+   
+etc
+
+desendente por id
+
+partiria desdes el ultimo id
+id 17
+
+ascedente por el nombre del cliente
+sigue el abecedario
+
+parte de la b
+            c
+            d
+            
+etc
+
+tambien puedo hacer operaciones
+por ejemplo 
+
+crear una tabla proovedores
+copiando la tabla
+clientes
+
+por ejemplo una opcion
+seria 
+
+copiar structura y datos
+
+
+id int(100) not null auto increment
+
+podria hacer un select 
+y ver todos los datos 
+de la tabla proovedores
+segun la tabla clientes
+
+vaciar la tabla truncate
+borrar la tabla drop
+
+
+la otra opcion seria
+copiar solo estrucutura
+
+la tabla estaria vacia
+
+se va a copiar la tabla proveedores y se va a mover
+a proovedores 2
+
+significa que va a haber un rename de la tabla
+prooverdores a proovedores 2 
+
+se va a crear otra base de datos
+con nombre crm2 con cotejamiento 
+utf8_spanish_ci
+
+
+podemos mover una tabla de una base de 
+datos 
+
+a otra base de datos
+
+creamos una tabla en la nueva
+base de datos
+
+cmr2.prooveedores
+
+y movemos la siguiente tabla
+cmr.prooveedores2
+
+puedo devolver de nuevo la tabla
+creado una nueva tabla en cmr
+
+mover
+crm.prooveedores
+
+desde
+crm2.prooveedores
+
+
+
+
 
 
 
