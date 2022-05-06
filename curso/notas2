@@ -166,6 +166,30 @@ Dirección URL incorrecta: al igual que el error 404, un error 400 Bad Request
 se produce cuando los usuarios introducen una dirección incorrecta y, 
 por ejemplo, insertan caracteres especiales ilícitos.
 
+si quiere borrar tambien sale 1142
+porque no tiene los permisos
+
+tampoco tiene permiso para editar
+
+
+ahora puedes cerrar sesion y crear un nuevo
+usuario
+
+despues de crearlo puedes editar los
+privilegios
+
+tienes que añadir privilegios en la base
+de datos crm
+
+añadir privilegios en la tabla clientes
+
+se añadio select 
+todos los campos 
+select *
+
+ahora puedo cerrar sesion 
+y volver i iniciar con el usuario
+nuevo creado
 
 
 
