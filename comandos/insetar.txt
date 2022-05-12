@@ -1,0 +1,1 @@
+INSERT INTO `clientes`(`idCliente`, `nombreCompania`, `nombreContacto`, `direccion`, `ciudad`, `region`, `codigoPostal`) VALUES ('[]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]');
