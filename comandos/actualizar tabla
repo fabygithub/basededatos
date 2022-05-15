@@ -1,0 +1,1 @@
+UPDATE `clientes` SET `nombre`='Juan Pablo' ,`direccion`='Av. SQL 127001' WHERE id=1
