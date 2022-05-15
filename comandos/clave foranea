@@ -1,0 +1,1 @@
+ALTER TABLE `curso` ADD FOREIGN KEY (`id_Materia`) REFERENCES `materia`(`id_Materia`)
