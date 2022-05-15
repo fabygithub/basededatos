@@ -1,0 +1,13 @@
+127.0.0.1/clientes/clientes/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=clientes&table=clientes
+Su consulta se ejecutó con éxito.
+
+DESCRIBE clientes;
+
+
+
+id	int(11)	NO	PRI	NULL	auto_increment	
+nombre	varchar(60)	NO		NULL		
+apellido	varchar(60)	NO		NULL		
+direccion	varchar(60)	YES		NULL		
+
+
