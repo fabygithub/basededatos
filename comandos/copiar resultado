@@ -11,3 +11,35 @@ apellido	varchar(60)	NO		NULL
 direccion	varchar(60)	YES		NULL		
 
 
+127.0.0.1/diagnostico/clientes/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=diagnostico&table=clientes
+Su consulta se ejecutó con éxito.
+
+DESCRIBE clientes;
+
+
+
+idCliente	varchar(5)	NO	PRI			
+nombreCompania	varchar(40)	NO	MUL			
+nombreContacto	varchar(30)	NO		Unknown		
+direccion	varchar(60)	NO				
+ciudad	varchar(15)	NO	MUL			
+region	varchar(15)	NO	MUL			
+codigoPostal	varchar(10)	NO	MUL			
+
+127.0.0.1/diagnostico/companiasenvio/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=diagnostico&table=companiasenvio
+Su consulta se ejecutó con éxito.
+
+DESCRIBE companiasenvio;
+
+
+
+idCompaniaEnvio	int(10) unsigned	NO	PRI	NULL	auto_increment	
+nombreCompania	varchar(10)	NO				
+telefono	varchar(24)	NO				
+
+
+
+
+
+
+
