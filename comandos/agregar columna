@@ -1,0 +1,1 @@
+ALTER TABLE `instructor` ADD `Id_Persona` INT NOT NULL AFTER `Tarifa`;
