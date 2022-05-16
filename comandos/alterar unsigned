@@ -1,0 +1,1 @@
+ALTER TABLE `instructor` CHANGE `Tarifa` `Tarifa` DECIMAL(10,0) UNSIGNED NOT NULL;
