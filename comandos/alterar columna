@@ -1,0 +1,3 @@
+ALTER TABLE Employees
+ALTER COLUMN BirthDate year;
+
