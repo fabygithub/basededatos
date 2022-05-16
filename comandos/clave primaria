@@ -1,0 +1,1 @@
+ALTER TABLE `evaluacion1`.`curso` DROP INDEX `Id_Curso`, ADD UNIQUE `Id_Curso` (`Id_Curso`) USING BTREE;
