@@ -1,3 +1,3 @@
 ALTER TABLE `curso` ADD FOREIGN KEY (`id_Materia`) REFERENCES `materia`(`id_Materia`)
 ALTER TABLE `instructor` ADD FOREIGN KEY (`Id_Persona`) REFERENCES `persona`(`Id_Persona`);
-
+ALTER TABLE `nota` ADD FOREIGN KEY (`Id_Curso`) REFERENCES `curso`(`Id_Curso`);
