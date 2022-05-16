@@ -2,3 +2,6 @@ ALTER TABLE `curso` ADD FOREIGN KEY (`id_Materia`) REFERENCES `materia`(`id_Mate
 ALTER TABLE `instructor` ADD FOREIGN KEY (`Id_Persona`) REFERENCES `persona`(`Id_Persona`);
 ALTER TABLE `nota` ADD FOREIGN KEY (`Id_Curso`) REFERENCES `curso`(`Id_Curso`);
 ALTER TABLE `curso` ADD FOREIGN KEY (`Id_Materia`) REFERENCES `materia`(`Id_Materia`);
+ALTER TABLE `curso` ADD FOREIGN KEY (`Id_Aula`) REFERENCES `aula`(`Id_Aula`);
+ALTER TABLE `curso` ADD FOREIGN KEY (`Id_Instructor`) REFERENCES `instructor`(`Id_Instructor`);
+ALTER TABLE `curso` ADD FOREIGN KEY (`Id_Periodo`) REFERENCES `periodo`(`Id_Periodo`)
