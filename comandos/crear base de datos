@@ -1,1 +1,2 @@
-CREATE DATABASE clientes;
+CREATE DATABASE world;
+mysql> CREATE DATABASE new_database;
