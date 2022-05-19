@@ -1,0 +1,4 @@
+SELECT * FROM city,country
+where region = 'Polynesia'
+
+
