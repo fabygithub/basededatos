@@ -1,4 +1,23 @@
 SELECT * FROM city,country
 where region = 'Polynesia'
 
+SELECT id,code from city,country
+
+SELECT id,continent from city,country
+ where continent = 'south america'   
+ 
+  SELECT name,continent from country
+ where continent = 'south america'
+ 
+ SELECT *
+FROM city
+inner join country;
+
+select count(continent) from country
+where continent = 'south america'
+
+ SELECT * from city
+ inner join country
+where code = 'zwe'
+
 
