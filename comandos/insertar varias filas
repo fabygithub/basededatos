@@ -1,0 +1,11 @@
+INSERT INTO `clientes`(`id`, `nombre`, `apellido`, `telefono`)
+VALUES ('[]','juan','perez','+56922222222'),
+('[]','felipe','perez','+56922222222'),
+('[]','esteban','perez','+56922222222'),
+('[]','solange','perez','+56922222222'),
+('[]','maria','perez','+56922222222'),
+('[]','juan','perez','+56922222222'),
+('[]','felipe','perez','+56922222222'),
+('[]','esteban','perez','+56922222222'),
+('[]','solange','perez','+56922222222'),
+('[]','maria','perez','+56922222222');
