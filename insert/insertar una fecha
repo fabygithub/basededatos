@@ -1,0 +1,2 @@
+INSERT INTO `capacitacion`(`nombre`, `horario`)
+values ('juan','20-04-20');
