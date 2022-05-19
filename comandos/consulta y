@@ -1,0 +1,2 @@
+  SELECT  count(*) from city
+  where name = 'Kabul'
