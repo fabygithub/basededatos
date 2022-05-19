@@ -8,3 +8,10 @@
 # FROM city INNER JOIN country 
  where region = 'polynesia'
 
+
+ SELECT  count(region) from country
+# FROM city INNER JOIN country 
+ where region = 'south america'
+ 
+ 
+ 
