@@ -1,0 +1,4 @@
+SELECT count(*)
+ FROM city INNER JOIN country
+where id = 10
+
