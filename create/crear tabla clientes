@@ -1,0 +1,11 @@
+CREATE TABLE cliente
+(codigo_unico int NOT NULL,
+ nombre varchar(50) NOT NULL,
+ apellido varchar(50)not null,
+ telefono varchar(15) not null,
+ direccion varchar(45) not null,
+ correo_electrico varchar(45) not null,
+ fecha_registro date not null,
+ PRIMARY KEY (codigo_unico)
+);
+
