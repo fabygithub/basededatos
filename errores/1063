@@ -1,0 +1,8 @@
+13:27:09	CREATE TABLE cliente (codigo_unico varchar(50) NOT NULL auto_increment,  nombre varchar(50) NOT NULL,  
+apellido varchar(50)not null,  telefono varchar(15) not null,  direccion varchar(45) not null, 
+correo_electrico varchar(45) not null,  fecha_registro date not null,  PRIMARY KEY (codigo_unico) )	
+
+Error Code: 1063. Incorrect column specifier for column 'codigo_unico'	0.000 sec
+
+
+no se puede poner varchar
