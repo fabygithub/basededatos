@@ -1,0 +1,4 @@
+select count(distinct c.name)
+ from city c 
+ inner join country cl on (cl.Code = c.CountryCode)
+ where cl.continent = 'south america'
