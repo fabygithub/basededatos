@@ -1,0 +1,10 @@
+select c.id  as  'cuidades'
+	from city  as c
+  
+  
+  select r.id  as  'cuidades',count(c.continent) as 'total ciudades'
+	from city  as r
+    join country as c on r.name = c.name
+    
+    
+  
