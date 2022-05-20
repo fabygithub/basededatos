@@ -1,0 +1,79 @@
+create database telovendo 
+ 
+CREATE TABLE cliente
+(codigo_unico int NOT NULL auto_increment,
+ nombre varchar(50) NOT NULL,
+ apellido varchar(50)not null,
+ telefono varchar(15) not null,
+ direccion varchar(45) not null,
+ correo_electrico varchar(45) not null,
+ fecha_registro date not null,
+ PRIMARY KEY (codigo_unico)
+); 
+
+INSERT INTO `cliente`( `nombre`, `apellido`,`telefono`,`direccion`,`correo_electronico`,`fecha_registro`)
+VALUES ('pedro','gonzalez','+56922321234','departamental 263','pedrog@gmail.com','2021-11-02');
+
+CREATE TABLE producto
+(sku int NOT NULL auto_increment,
+ nombre varchar(50) NOT NULL,
+ proveedor varchar(50)not null,
+ stock varchar(15) not null,
+ PRIMARY KEY (sku)
+);
+
+
+INSERT INTO `producto`( `nombre`, `proveedor`,`stock`)
+VALUES ('parrilla','homecenter','34');
+
+
+CREATE TABLE vendedor
+(run varchar(10) NOT NULL,
+ nombre varchar(50) NOT NULL,
+ apellido varchar(50)not null,
+ fecha_nacimiento date not null,
+ PRIMARY KEY (run)
+);
+
+
+INSERT INTO `vendedor`( `run`, `nombre`, `apellido`,`fecha_nacimiento`)
+VALUES ('12234324-7','pedro','gonzalez','1988-03-11'),
+       ('12534324-7','juan','soto','1998-03-21'),
+       ('12434324-7','macarena','torres','1978-03-21'),
+       ('12634324-7','santiago','muñoz','1958-03-31'),
+       ('12734324-7','lucas','morales','1999-03-01'),
+       ('12834324-7','tito','parra','1938-03-01'),
+       ('12934324-7','marcos','sanchez','1978-03-01'),
+       ('12114324-7','carlos','delgado','1981-03-04'),
+       ('12124324-7','susana','mella','1982-03-06'),
+       ('12134324-7','ignacio','baeza','1938-03-07');
+
+
+Respondan las siguientes preguntas en grupo:
+a. ¿Qué tipo de datos les permite guardar fechas?¿Y horas?
+datetime
+
+b. ¿Qué utilidad tiene especificar el número de caracteres en SQL?
+claridad de los valores
+
+
+c. Por último, definan el acrónimo CRUD.
+CRUD es el acrónimo de "Crear, Leer, Actualizar y Borrar
+
+d. Qué palabra clave se utiliza para:
+- Mostrar bases de datos en SQL. 
+show 
+select
+- Describir una base de datos en SQL.
+describe
+- Seleccionar una base de datos.
+select
+- Crear una tabla.
+create
+- ¿Qué es una primary key? y una foreign key?
+clave unica
+clave para relacionar tablas
+
+- Que diferencias hay entre utilizar MySQL shell y MySQL Workbench.
+workbench es una aplicaion
+shell es una consola
