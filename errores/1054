@@ -1,0 +1,6 @@
+13:37:22	INSERT INTO `cliente`(`nombre`,`apellido`,`telefono`,`direccion`,`correo_electronico`,`fecha_registro`) 
+VALUES ('pedro','gonzalez','+56922321234','pedrog@gmail.com','2021-11-02')	
+Error Code: 1054. Unknown column 'correo_electronico' in 'field list'	0.000 sec
+
+falta 1 campo
+
