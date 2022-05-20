@@ -1,0 +1,3 @@
+select count(Code)
+ from city c
+ inner join country cl
