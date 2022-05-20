@@ -1,0 +1,4 @@
+select count(distinct language)
+ from country c 
+ inner join countrylanguage cl on (c.code = cl.countrycode)
+ where continent = 'south america'
