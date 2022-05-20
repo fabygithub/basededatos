@@ -1,4 +1,8 @@
 create database sakila
 https://dev.mysql.com/doc/index-other.html
 
+boton derecho
+create schema
+CREATE SCHEMA `restaurant` DEFAULT CHARACTER SET utf8mb4 ;
+
 
