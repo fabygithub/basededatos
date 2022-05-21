@@ -1,0 +1,2 @@
+ALTER TABLE productos
+ADD COLUMN precio decimal(7,2) not null;
