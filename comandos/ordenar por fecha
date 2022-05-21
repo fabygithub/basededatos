@@ -1,0 +1,29 @@
+select * from reservaciones order by fecha; 
+asc primera fecha a la ultima
+desc ultima fecha a la primera
+
+select * from menus order by menu_price
+asc del menor al mayor
+desc del mayor al menor
+
+select count(id),fecha
+from reservaciones
+group by fecha
+order by count(id) desc;
+
+
+# va a contar los ids en de mayor a menor
+# ordenando por fechas
+select count(reservation_id),date_created
+from reservations
+group by date_created
+order by (reservation_id) desc;
+
+
+
+
+
+
+
+
+
