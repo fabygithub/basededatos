@@ -1,0 +1,5 @@
+valor fuera de rango
+
+15:36:44	UPDATE vendedor SET salario = 3000000 where nombre = 'marcos'	Error Code: 1264. Out of range value for column 'salario' at row 10	0.000 sec
+
+
