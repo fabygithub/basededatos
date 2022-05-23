@@ -3,3 +3,11 @@ FROM vendedor
 WHERE  salario  >
 (SELECT avg (salario)
 FROM vendedor)
+
+
+SELECT precio
+FROM producto
+WHERE  precio  >
+(SELECT avg (precio)
+FROM producto)
+
