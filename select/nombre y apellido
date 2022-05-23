@@ -1,0 +1,8 @@
+L. Seleccione el nombre y el apellido de los vendedores que tienen un salario superior al promedio. 
+
+
+SELECT nombre,apellido
+FROM vendedor
+WHERE  salario  >
+(SELECT avg (salario)
+FROM vendedor)
