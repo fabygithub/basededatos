@@ -1,0 +1,4 @@
+M. Indique cuál es el producto más barato y el producto más caro del inventario.
+
+SELECT min(nombre), max(nombre)
+FROM producto
