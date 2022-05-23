@@ -1,0 +1,5 @@
+SELECT salario
+FROM vendedor
+WHERE  salario  >
+(SELECT avg (salario)
+FROM vendedor)
