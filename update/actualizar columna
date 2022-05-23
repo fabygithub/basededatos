@@ -1,1 +1,4 @@
+UPDATE productos SET precio = 32.50
 
+UPDATE vendedor SET salario = 3250
+where nombre = 'susana';
