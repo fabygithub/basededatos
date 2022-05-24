@@ -1,0 +1,4 @@
+SELECT nombre
+from producto
+order by precio desc
+limit 1
