@@ -1,0 +1,2 @@
+INSERT INTO `operador`(`run`, `nombre`,`apellido`, `salario` )
+values ('18727321-6','pedro','soto', 500000);
