@@ -1,1 +1,6 @@
+ALTER TABLE employees CHANGE COLUMN name last_name VARCHAR(150);
+
+ALTER TABLE employees MODIFY COLUMN last_name VARCHAR(100);
+
+ALTER TABLE operador MODIFY COLUMN run VARCHAR(15);
 
