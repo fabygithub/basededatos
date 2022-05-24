@@ -1,0 +1,8 @@
+
+    
+    SELECT nombre
+    FROM  producto
+
+WHERE precio = (SELECT MAX(precio) FROM producto)
+
+OR precio = (SELECT MIN(precio) FROM producto)
