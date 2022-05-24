@@ -1,2 +1,3 @@
-INSERT INTO `operador`(`run`, `nombre`,`apellido`, `salario` )
-values ('18727321-6','pedro','soto', 500000);
+
+INSERT INTO `operador`(`run`, `nombre`,`apellido`,`telefono`,`direccion`,`salario`)
+values ('18727321-6','pedro','soto','+56444333223','las palmas 02','4000000');
