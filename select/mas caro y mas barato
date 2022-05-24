@@ -1,3 +1,5 @@
+select max and min in the same query
+
 
     
     SELECT nombre
