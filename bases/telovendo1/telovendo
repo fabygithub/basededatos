@@ -36,6 +36,15 @@ CREATE TABLE vendedor
  PRIMARY KEY (run)
 );
 
+CREATE TABLE vendedor (
+    run varchar(20),
+    nombre varchar(255),
+    apellido varchar(255),
+    fecha_nacimiento date,
+    salario int
+);
+
+
 
 INSERT INTO `vendedor`( `run`, `nombre`, `apellido`,`fecha_nacimiento`,`salario`)
 VALUES ('12234324-7','pedro','gonzalez','1988-03-11','250000'),
