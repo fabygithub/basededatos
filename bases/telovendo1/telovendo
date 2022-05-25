@@ -32,21 +32,22 @@ CREATE TABLE vendedor
  nombre varchar(50) NOT NULL,
  apellido varchar(50)not null,
  fecha_nacimiento date not null,
+ salario(int),
  PRIMARY KEY (run)
 );
 
 
-INSERT INTO `vendedor`( `run`, `nombre`, `apellido`,`fecha_nacimiento`)
-VALUES ('12234324-7','pedro','gonzalez','1988-03-11'),
-       ('12534324-7','juan','soto','1998-03-21'),
-       ('12434324-7','macarena','torres','1978-03-21'),
-       ('12634324-7','santiago','muñoz','1958-03-31'),
-       ('12734324-7','lucas','morales','1999-03-01'),
-       ('12834324-7','tito','parra','1938-03-01'),
-       ('12934324-7','marcos','sanchez','1978-03-01'),
-       ('12114324-7','carlos','delgado','1981-03-04'),
-       ('12124324-7','susana','mella','1982-03-06'),
-       ('12134324-7','ignacio','baeza','1938-03-07');
+INSERT INTO `vendedor`( `run`, `nombre`, `apellido`,`fecha_nacimiento`,`salario`)
+VALUES ('12234324-7','pedro','gonzalez','1988-03-11','250000'),
+       ('12534324-7','juan','soto','1998-03-21','250000'),
+       ('12434324-7','macarena','torres','1978-03-21','350000'),
+       ('12634324-7','santiago','muñoz','1958-03-31','450000'),
+       ('12734324-7','lucas','morales','1999-03-01','550000'),
+       ('12834324-7','tito','parra','1938-03-01','650000'),
+       ('12934324-7','marcos','sanchez','1978-03-01','750000'),
+       ('12114324-7','carlos','delgado','1981-03-04','850000'),
+       ('12124324-7','susana','mella','1982-03-06','950000'),
+       ('12134324-7','ignacio','baeza','1938-03-07','350000');
 
 
 Respondan las siguientes preguntas en grupo:
