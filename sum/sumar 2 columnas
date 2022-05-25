@@ -1,0 +1,22 @@
+
+SELECT min(salario) 
+from vendedor
+
+
+SELECT max(salario) 
+from vendedor
+
+SELECT min(salario),
+SUM(salario)
+from vendedor
+
+mysql sumar dos columnas
+
+SELECT 
+sum(salario)+(sum(salario))
+from vendedor
+
+SELECT 
+sum(salario)+(min(salario))
+from vendedor
+
