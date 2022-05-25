@@ -16,7 +16,11 @@ SELECT
 sum(salario)+(sum(salario))
 from vendedor
 
+
+F. Súmele el salario mínimo identificado al salario de todos los vendedores.
 SELECT 
 sum(salario)+(min(salario))
 from vendedor
+
+
 
