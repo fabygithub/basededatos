@@ -1,0 +1,1 @@
+UPDATE cuentas SET balance = balance - cantidad_transferida WHERE cliente = persona1;
