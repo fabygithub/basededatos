@@ -6,6 +6,9 @@ CREATE TABLE adminUsers
 
 SELECT * FROM users;
 
+H. Cree una tabla que contenga solo los clientes que han pagado más que el promedio.
+
+
 CREATE TABLE clientepromedio
 SELECT codigo_unico,nombre,apellido,telefono,direccion,correo_electronico,fecha_registro,total_pagado
 FROM cliente
