@@ -1,0 +1,6 @@
+INSERT INTO `cuenta`(`saldo`)
+VALUES ('234'),
+('2344'),
+('42222'),
+('34522');
+
