@@ -1,0 +1,6 @@
+G. Elimine el producto más caro del inventario.
+
+DELETE FROM producto
+ORDER BY precio DESC
+LIMIT 1
+
