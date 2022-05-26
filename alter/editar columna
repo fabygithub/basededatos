@@ -4,3 +4,5 @@ ALTER TABLE employees MODIFY COLUMN last_name VARCHAR(100);
 
 ALTER TABLE operador MODIFY COLUMN run VARCHAR(15);
 
+ALTER TABLE cuenta MODIFY COLUMN cuenta_usuario VARCHAR(1);
+
