@@ -1,0 +1,253 @@
+CREATE DATABASE IF NOT EXISTS diagnostico2022_1;
+
+DROP TABLE IF EXISTS `categorias`;
+CREATE TABLE categorias(
+  IdCategoria tinyint(5) unsigned NOT NULL AUTO_INCREMENT,
+  NombreCategoria varchar(15) NOT NULL DEFAULT '',
+  Descripcion mediumtext NOT NULL,
+  Imagen varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (IdCategoria),
+  UNIQUE KEY Uidx_categorias_category_name (NombreCategoria)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE clientes (
+  IdCliente varchar(5) NOT NULL DEFAULT '',
+  NombreCompania varchar(40) NOT NULL DEFAULT '',
+  NombreContacto varchar(30) NOT NULL DEFAULT 'Unknown',
+  CargoContacto varchar(30) NOT NULL DEFAULT '',
+  Direccion varchar(60) NOT NULL DEFAULT '',
+  Ciudad varchar(15) NOT NULL DEFAULT '',
+  Region varchar(15) NOT NULL DEFAULT '',
+  CodigoPostal varchar(10) NOT NULL DEFAULT '',
+  Pais varchar(15) NOT NULL DEFAULT '',
+  Telefono varchar(24) NOT NULL DEFAULT '',
+  Fax varchar(24) NOT NULL DEFAULT '',
+  PRIMARY KEY (IdCliente),
+  KEY idx_clientes_company_name (NombreCompania),
+  KEY idx_clientes_Ciudad (Ciudad),
+  KEY idx_clientes_region (Region),
+  KEY idx_clientes_CodigoPostal (CodigoPostal)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE companiasenvio (
+  IdCompaniaEnvio int(10) unsigned NOT NULL AUTO_INCREMENT,
+  NombreCompania varchar(40) NOT NULL DEFAULT '',
+  Telefono varchar(24) NOT NULL DEFAULT '',
+  PRIMARY KEY (`IdCompaniaEnvio`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE empleados (
+  IdEmpleado int(10) unsigned NOT NULL AUTO_INCREMENT,
+  Apellido varchar(20) NOT NULL DEFAULT '',
+  Nombre varchar(10) NOT NULL DEFAULT '',
+  Cargo varchar(30) NOT NULL DEFAULT '',
+  Tratamiento varchar(25) NOT NULL DEFAULT '',
+  FechaNacimiento datetime NOT NULL,
+  FechaContratacion datetime NOT NULL,
+  Direccion varchar(60) NOT NULL DEFAULT '',
+  Ciudad varchar(15) NOT NULL DEFAULT '',
+  Region varchar(15) NOT NULL DEFAULT '',
+  CodigoPostal varchar(10) NOT NULL DEFAULT '',
+  Pais varchar(15) NOT NULL DEFAULT '',
+  TelefonoDomicilio varchar(24) NOT NULL DEFAULT '',
+  Extension varchar(4) NOT NULL DEFAULT '',
+  Foto varchar(50) NOT NULL DEFAULT '',
+  Notas mediumtext,
+  Jefe int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (IdEmpleado),
+  KEY idx_empleados_Apellido (Apellido),
+  KEY idx_empleados_CodigoPostal (CodigoPostal),
+  KEY idx_Jefe (Jefe),
+  CONSTRAINT FK_empleados_reports_to FOREIGN KEY (Jefe) REFERENCES empleados (IdEmpleado)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `proveedores` (
+  `IdProveedor` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `NombreCompania` varchar(40) NOT NULL DEFAULT '',
+  `NombreContacto` varchar(30) NOT NULL DEFAULT '',
+  `CargoContacto` varchar(30) NOT NULL DEFAULT '',
+  `Direccion` varchar(60) NOT NULL DEFAULT '',
+  `Ciudad` varchar(15) NOT NULL DEFAULT '',
+  `Region` varchar(15) NOT NULL DEFAULT '',
+  `CodigoPostal` varchar(10) NOT NULL DEFAULT '',
+  `Pais` varchar(15) NOT NULL DEFAULT '',
+  `Telefono` varchar(24) NOT NULL DEFAULT '',
+  `Fax` varchar(24) NOT NULL DEFAULT '',
+  `HomePage` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`IdProveedor`),
+  KEY `idx_proveedores_product_name` (`NombreCompania`),
+  KEY `idx_proveedores_CodigoPostal` (`CodigoPostal`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `regiones` (
+  `IdRegion` int(11) NOT NULL AUTO_INCREMENT,
+  `DescripcionRegion` varchar(50) NOT NULL,
+  PRIMARY KEY (`IdRegion`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `territorios` (
+  `IdTerritorio` varchar(5) NOT NULL,
+  `DescripcionTerritorio` varchar(50) NOT NULL,
+  `IdRegion` int(11) NOT NULL,
+  PRIMARY KEY (`IdTerritorio`),
+  KEY `fk_regio_idx` (`IdRegion`),
+  CONSTRAINT `fk_regio` FOREIGN KEY (`IdRegion`) REFERENCES `regiones` (`IdRegion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE empleado_territorio (
+  IdEmpleado int(10) unsigned NOT NULL,
+  IdTerritorio varchar(5) NOT NULL,
+  PRIMARY KEY (IdEmpleado,IdTerritorio),
+  KEY fk_table1_empleados_idx (IdEmpleado),
+  KEY fk_table1_territorio1_idx (IdTerritorio),
+  CONSTRAINT fk_empleado_et FOREIGN KEY (IdEmpleado) REFERENCES empleados (IdEmpleado),
+  CONSTRAINT fk_territorios_et FOREIGN KEY (IdTerritorio) REFERENCES territorios (IdTerritorio)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `productos` (
+  `IdProducto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `NombreProducto` varchar(40) NOT NULL DEFAULT '',
+  `IdProveedor` int(10) unsigned NOT NULL,
+  `IdCategoria` tinyint(5) unsigned NOT NULL,
+  `CantidadPorUnidad` varchar(20) NOT NULL DEFAULT '',
+  `PrecioUnitario` double NOT NULL DEFAULT '0',
+  `UnidadesEnStock` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `UnidadesEnPedido` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `NivelReorden` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `Descontinuado` enum('s','n') NOT NULL DEFAULT 'n',
+  PRIMARY KEY (`IdProducto`),
+  KEY `FK_productos_IdCategoria` (`IdCategoria`),
+  KEY `FK_productos_IdProveedor` (`IdProveedor`),
+  KEY `idx_productos_product_name` (`NombreProducto`),
+  CONSTRAINT `FK_productos_IdCategoria` FOREIGN KEY (`IdCategoria`) REFERENCES `categorias` (`IdCategoria`),
+  CONSTRAINT `FK_productos_IdProveedor` FOREIGN KEY (`IdProveedor`) REFERENCES `proveedores` (`IdProveedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `pedidos` (
+  `IdPedido` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `IdCliente` varchar(5) NOT NULL DEFAULT '',
+  `IdEmpleado` int(10) unsigned NOT NULL,
+  `FechaPedido` datetime NOT NULL,
+  `FechaEntrega` datetime DEFAULT NULL,
+  `FechaEnvio` datetime DEFAULT NULL,
+  `EnviadoVia` int(10) unsigned NOT NULL,
+  `Flete` double NOT NULL DEFAULT '0',
+  `NombreDestinatario` varchar(40) NOT NULL DEFAULT '',
+  `DireccionDestinatario` varchar(60) NOT NULL DEFAULT '',
+  `CiudadDestino` varchar(15) NOT NULL DEFAULT '',
+  `RegionDestino` varchar(15) NOT NULL DEFAULT '',
+  `CodigoPostalDestinatario` varchar(10) NOT NULL DEFAULT '',
+  `PaisDestino` varchar(15) NOT NULL DEFAULT '',
+  PRIMARY KEY (`IdPedido`),
+  KEY `FK_pedidos_ViaEmbarcacion` (`EnviadoVia`),
+  KEY `FK_pedidos_IdEmpleado` (`IdEmpleado`),
+  KEY `idx_pedidos_shipped_date` (`FechaEnvio`),
+  KEY `idx_pedidos_ship_CodigoPostal` (`CodigoPostalDestinatario`),
+  KEY `FK_pedidos_customer_id` (`IdCliente`),
+  CONSTRAINT `FK_pedidos_IdEmpleado` FOREIGN KEY (`IdEmpleado`) REFERENCES `empleados` (`IdEmpleado`),
+  CONSTRAINT `FK_pedidos_ViaEmbarcacion` FOREIGN KEY (`EnviadoVia`) REFERENCES `companiasenvio` (`IdCompaniaEnvio`),
+  CONSTRAINT `FK_pedidos_customer_id` FOREIGN KEY (`IdCliente`) REFERENCES `clientes` (`IdCliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=11078 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE detalles_pedido (
+  IdDetallePedido int(10) unsigned NOT NULL AUTO_INCREMENT,
+  IdPedido int(10) unsigned NOT NULL,
+  IdProducto int(10) unsigned NOT NULL,
+  PrecioUnitario double unsigned NOT NULL DEFAULT '0',
+  Cantidad smallint(5) unsigned NOT NULL DEFAULT '1',
+  Descuento float unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (IdDetallePedido),
+  UNIQUE KEY Uidx_IdPedido_IdProducto (IdPedido,IdProducto),
+  KEY FK_detalles_pedido_IdProducto (IdProducto),
+  CONSTRAINT FK_detalles_pedido_IdPedido FOREIGN KEY (IdPedido) REFERENCES pedidos (IdPedido),
+  CONSTRAINT FK_detalles_pedido_IdProducto FOREIGN KEY (IdProducto) REFERENCES productos (IdProducto)
+) ENGINE=InnoDB AUTO_INCREMENT=2156 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO categorias VALUES (1,'Bebidas','Gaseosas, cafÃ©, tÃ©, cervezas y maltas','beverages.gif'),(2,'Condimentos','Salsas dulces y picantes, delicias, comida para untar y aderezos','condiments.gif'),(3,'ReposterÃ­a','Postres, dulces y pan dulce','confections.gif'),(4,'LÃ¡cteos','Quesos','diary.gif'),(5,'Granos/Cereales','Pan, galletas, pasta y cereales','cereals.gif'),(6,'Carnes','Carnes preparadas','meat.gif'),(7,'Frutas/Verduras','Frutas secas y queso de soja','produce.gif'),(8,'Pescado/Marisco','Pescados, mariscos y algas','seafood.gif');
+
+INSERT INTO clientes VALUES ('ALFAA','Alfreds Futterkiste','Maria Anders','Representante de ventas','Obere Str.57','BerlÃ­n','','12209','Alemania','030-0074321','030-0076545'),
+('ANATR','Ana Trujillo Emparedados y helados','Ana Trujillo','Propietario','Avda. de la ConstituciÃ³n 2222','MÃ©xico D.F.','','05021','MÃ©xico','(5) 555-4729','(5) 555-3745'),
+('ANTON','Antonio Moreno TaquerÃ­a','Antonio Moreno','Propietario','Mataderos  2312','MÃ©xico D.F.','','05023','MÃ©xico','(5) 555-3932',''),('AROUT','Around the Horn','Thomas Hardy','Representante de ventas','120 Hanover Sq.','Londres','','WA1 1DP','Reino Unido','(171) 555-7788','(171) 555-6750');
+
+INSERT INTO companiasenvio VALUES 
+(1,'Speedy Express','(503) 555-9831'),
+(2,'United Package','(503) 555-3199'),
+(3,'Federal Shipping','(503) 555-9931');
+
+INSERT INTO `proveedores` VALUES (1,'Exotic Liquids','Charlotte Cooper','Gerente de compras','49 Gilbert St.','Londres','','EC1 4SD','Reino Unido','(171) 555-2222','',''),(2,'New Orleans Cajun Delights','Shelley Burke','Administrador de pedidos','P.O. Box 78934','New Orleans','LA','70117','Estados Unidos','(100) 555-4822','','#CAJUN.HTM#');
+
+INSERT INTO `regiones` VALUES (1,'Este'),(2,'Oeste'),(3,'Norte'),(4,'Sur');
+
+
+INSERT INTO `territorios` VALUES ('01581','Westboro',1),('01730','Bedford',1),('01833','Georgetow',1),('02116','Boston',1),('02139','Cambridge',1),('02184','Braintree',1),('02903','Providence',1),('03049','Hollis',3),('03801','Portsmouth',3),('06897','Wilton',1),('07960','Morristown',1),('08837','Edison',1),('10019','New York',1),('10038','New York',1),('11747','Mellvile',1),('14450','Fairport',1),('19428','Philadelphia',3),('19713','Neward',1),('20852','Rockville',1),('27403','Greensboro',1),('27511','Cary',1),('29202','Columbia',4),('30346','Atlanta',4),('31406','Savannah',4),('32859','Orlando',4),('33607','Tampa',4),('40222','Louisville',1);
+
+
+INSERT INTO `productos` VALUES (1,'TÃ© Dharamsala',1,1,'10 cajas x 20 bolsas',18,39,0,10,'n'),(2,'Cerveza tibetana Barley',1,1,'24 - bot. 12 l',19,17,40,25,'n'),(3,'Sirope de regaliz',1,2,'12 - bot. 550 ml',10,13,70,25,'n'),(4,'Especias Cajun del chef Anton',2,2,'48 - frascos 6 l',22,53,0,0,'n'),(5,'Mezcla Gumbo del chef Anton',2,2,'36 cajas',21.35,0,0,0,'s');
+
+
+
+
+
+
+
+
+
+INSERT INTO `pedidos` VALUES (10248,'VINET',5,'1996-07-04 00:00:00','1996-08-01 00:00:00','1996-07-16 00:00:00',3,32.38,'Vins et alcools Chevalier','59 rue de l\'Abbaye','Reims','','51100','Francia'),
+(10249,'TOMSP',6,'1996-07-05 00:00:00','1996-08-16 00:00:00','1996-07-10 00:00:00',1,11.61,'Toms SpezialitÃ¤ten','Luisenstr. 48','MÃ¼nster','','44087','Alemania'),
+(10250,'TOMSP',6,'1996-07-05 00:00:00','1996-08-16 00:00:00','1996-07-10 00:00:00',1,11.61,'Toms SpezialitÃ¤ten','Luisenstr. 48','MÃ¼nster','','44087','Alemania'),
+(10251,'TOMSP',6,'1996-07-05 00:00:00','1996-08-16 00:00:00','1996-07-10 00:00:00',1,11.61,'Toms SpezialitÃ¤ten','Luisenstr. 48','MÃ¼nster','','44087','Alemania');
+
+
+
+INSERT INTO `detalles_pedido` VALUES (1,10248,11,14,12,0),
+(2,10248,42,9.8,10,0),
+(3,10248,72,34.8,5,0);
+
+INSERT INTO `empleado_territorio` VALUES (1,'19713'),(2,'01581'),(2,'01730'),(2,'01833'),(2,'02116'),(2,'02139'),(2,'02184'),(2,'40222'),(3,'30346'),(3,'31406'),(3,'32859'),(3,'33607'),(4,'20852'),(4,'27403'),(4,'27511'),(5,'02903'),(5,'07960'),(5,'08837'),(5,'10019'),(5,'10038'),(5,'11747'),(5,'14450'),(6,'85014'),(6,'85251'),(6,'98004'),(6,'98052'),(6,'98104'),(7,'60179'),(7,'60601'),(7,'80202'),(7,'80909'),(7,'90405'),(7,'94025'),(7,'94105'),(7,'95008'),(7,'95054'),(7,'95060'),(8,'19428'),(8,'44122'),(8,'45839'),(8,'53404'),(9,'03049'),(9,'03801'),(9,'48075'),(9,'48084'),(9,'48304'),(9,'55113'),(9,'55439');
+
+INSERT INTO `empleados` VALUES (1,'Davolio','Nancy','Representante de ventas','Srta.','1968-12-08 00:00:00','1992-05-01 00:00:00','507 - 20th Ave. E.\r\nApt. 2A','Seattle','WA','98122','Estados Unidos','(206) 555-9857','5467','nancy.jpg','Su formaciÃ³n incluye una licenciatura en PsicologÃ­a por la Universidad del Estado de Colorado. TambiÃ©n escribiÃ³ \"El arte de la llamada en frÃ­o\". Nancy es miembro de Toastmasters International.',2),
+(2,'Fuller','Andrew','Vicepresidente comercial','Dr.','1952-02-19 00:00:00','1992-08-14 00:00:00','908 W. Capital Way','Tacoma','WA','98401','Estados Unidos','(206) 555-9482','3457','andrew.jpg','Andrew completÃ³ su licenciatura en Comercio y un doctorado en Marketing Internacional de la Universidad de Dallas. Habla con fluidez en francÃ©s e italiano y lee el alemÃ¡n. IngresÃ³ en la empresa como representante de ventas, fue ascendido a gerente de cuentas y despuÃ©s fue nombrado vicepresidente comercial.',NULL);
+
+
+
+DROP TABLE detalles_pedido;
+DROP TABLE empleado_territorio;
+DROP TABLE territorios;
+drop TABLE regiones;
+drop TABLE productos;
+DROP TABLE pedidos;
+DROP TABLE proveedores;
+drop TABLE empleados;
+DROP TABLE companiasenvio;
+drop TABLE clientes;
+DROP TABLE categorias;
+
+
+
+DELETE FROM detalles_pedido;
+DELETE FROM empleado_territorio;
+DELETE FROM territorios;
+DELETE FROM regiones;
+DELETE FROM productos;
+DELETE FROM pedidos;
+DELETE FROM proveedores;
+DELETE FROM empleados;
+DELETE FROM companiasenvio;
+DELETE FROM clientes;
+DELETE FROM categorias;
+
+
+
+
+
+
