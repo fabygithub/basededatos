@@ -2,3 +2,51 @@ UPDATE productos SET precio = 32.50
 
 UPDATE vendedor SET salario = 3250
 where nombre = 'susana';
+
+UPDATE cliente SET total_pagado = 3250
+where codigo_unico = '1';
+
+UPDATE cliente SET total_pagado = 4250
+where codigo_unico = '2';
+
+UPDATE cliente SET total_pagado = 5250
+where codigo_unico = '3';
+
+UPDATE cliente SET total_pagado = 3123
+where codigo_unico = '4';
+
+UPDATE cliente SET total_pagado = 6250
+where codigo_unico = '5';
+
+UPDATE cliente SET total_pagado = 7250
+where codigo_unico = '6';
+
+UPDATE cliente SET total_pagado = 8250
+where codigo_unico = '7';
+
+UPDATE cliente SET total_pagado = 14250
+where codigo_unico = '8';
+
+UPDATE cliente SET total_pagado = 84250
+where codigo_unico = '9';
+
+UPDATE cliente SET total_pagado = 1234250
+where codigo_unico = '10';
+
+UPDATE cliente SET total_pagado = 324250
+where codigo_unico = '11';
+
+UPDATE cliente SET total_pagado = 555250
+where codigo_unico = '12';
+
+UPDATE cliente SET total_pagado = 3334250
+where codigo_unico = '13';
+
+UPDATE cliente SET total_pagado = 4444250
+where codigo_unico = '14';
+
+UPDATE cliente SET total_pagado = 6664250
+where codigo_unico = '15';
+
+UPDATE cliente SET total_pagado = 1114250
+where codigo_unico = '16';
