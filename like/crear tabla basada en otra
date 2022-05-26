@@ -5,3 +5,11 @@ How To Clone Tables in SQL
 CREATE TABLE adminUsers 
 
 SELECT * FROM users;
+
+CREATE TABLE clientepromedio
+SELECT codigo_unico,nombre,apellido,telefono,direccion,correo_electronico,fecha_registro,total_pagado
+FROM cliente
+WHERE  total_pagado  >
+(SELECT avg (total_pagado)
+FROM cliente)
+
