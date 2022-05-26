@@ -1,2 +1,7 @@
 sql create table like another table
 
+How To Clone Tables in SQL
+
+CREATE TABLE adminUsers 
+
+SELECT * FROM users;
