@@ -1,0 +1,9 @@
+Deshaga la transacción que realiza el usuario A al usuario usuario B.
+
+
+start transaction;
+UPDATE cuenta SET saldo = 
+(case when cuenta_usuario = 'a' then saldo - 200 
+      when cuenta_usuario = 'b' then saldo + 200 
+      end) ;     
+rollback;	 
