@@ -1,0 +1,8 @@
+Realice un commit de la transacción que realiza el usuario C al usuario usuario D
+
+start transaction;
+UPDATE cuenta SET saldo = 
+(case when cuenta_usuario = 'c' then saldo - 500 
+      when cuenta_usuario = 'd' then saldo + 500 
+      end) ;     
+commit;	  
