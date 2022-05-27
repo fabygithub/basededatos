@@ -46,3 +46,14 @@ limit 1;
 
 
 order by sql most repeated
+
+
+select categoria as mas_popular
+from producto
+group by categoria
+order by count(categoria) desc
+limit 1
+;
+
+
+
