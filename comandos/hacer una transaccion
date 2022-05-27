@@ -2,3 +2,12 @@ UPDATE cuentas SET balance = balance - cantidad_transferida WHERE cliente = pers
 UPDATE cuenta SET saldo = saldo - 200  WHERE cuenta_usuario = 'a';
 UPDATE cuenta SET saldo = saldo + 200 WHERE cuenta_usuario = 'b';
 
+
+ Transfiera 200 TLV Coins desde un usuario A un usuario B.
+
+UPDATE cuenta SET saldo = 
+(case when cuenta_usuario = 'a' then saldo - 200 
+      when cuenta_usuario = 'b' then saldo + 200 
+      end) ;     
+      
+      
