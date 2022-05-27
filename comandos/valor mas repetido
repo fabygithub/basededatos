@@ -1,0 +1,7 @@
+Cuál es la categoría de productos que más se repite.
+
+SELECT producto, COUNT( producto ) AS total
+FROM  registro
+GROUP BY producto
+ORDER BY total DESC 
+
