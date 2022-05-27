@@ -1,1 +1,4 @@
 ALTER TABLE `instructor` ADD `Id_Persona` INT NOT NULL AFTER `Tarifa`;
+
+select * from producto;
+ALTER TABLE `producto` ADD `categoria` varchar(10);
