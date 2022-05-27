@@ -31,3 +31,16 @@ group by categoria
 order by categoria desc
 );
 
+
+SELECT
+  categoria
+#  COUNT(categoria) AS `cat` 
+FROM
+  producto
+GROUP BY 
+  categoria
+ORDER BY 
+  count(categoria) 
+DESC
+limit 1;
+
