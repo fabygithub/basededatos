@@ -11,3 +11,12 @@ FROM  registro
 GROUP BY producto
 ORDER BY total DESC 
 
+
+Qué color de producto es más común en nuestra tienda.
+
+
+SELECT color
+from producto
+group by color
+order by  count(color) desc
+limit 1  
