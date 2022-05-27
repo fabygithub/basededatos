@@ -20,3 +20,14 @@ from producto
 group by color
 order by  count(color) desc
 limit 1  
+
+UPDATE `producto` SET `categoria`='la'  WHERE sku =2;
+select * from producto;
+
+Select categoria from producto 
+where categoria in (select (categoria)
+from producto
+group by categoria
+order by categoria desc
+);
+
