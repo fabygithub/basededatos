@@ -9,3 +9,21 @@ update producto set
     categoria = 'listo'
 ;
 
+
+
+with categoria as (
+   select categoria 
+   from producto 
+   group by categoria 
+   order by count(categoria)  
+   desc 
+   limit 1
+ 
+)
+update producto set
+categoria = 'listo4'
+order by categoria desc
+limit 1
+;
+
+
