@@ -1,0 +1,6 @@
+Cuáles son los productos con mayor stock
+
+
+select nombre from producto
+order by stock desc 
+limit 1
