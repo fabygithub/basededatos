@@ -1,0 +1,3 @@
+Select categoria 
+from producto 
+order by categoria desc;
