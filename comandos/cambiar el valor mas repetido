@@ -1,0 +1,9 @@
+with categoria as (
+   select categoria
+   from producto
+   group by categoria
+   order by count(categoria) desc
+   limit 1
+)
+update producto set
+    categoria = 'listo'
