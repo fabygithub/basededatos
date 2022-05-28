@@ -1,0 +1,12 @@
+select nombre_proveedor
+ from proveedor as p
+ inner join producto s on (s.sku = p.id)
+ where stock in
+ (
+ select *from
+ (
+  select max(stock)
+  from producto
+ )as subquery
+ )
+ ;
