@@ -1,0 +1,4 @@
+INSERT INTO joke(joke_text,author_id)
+values('tata',
+(SELECT id FROM author WHERE author_name  = 'Famous Anthony'));   
+
