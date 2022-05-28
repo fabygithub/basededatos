@@ -37,4 +37,15 @@ WHERE categoria = (
   ) 
   
   
+  UPDATE producto SET categoria  = 'super'
+WHERE categoria = (
+  SELECT categoria 
+  #FROM producto
+     group by categoria 
+     order by count(categoria)  
+     desc 
+     limit 1
+  ) ;
+  
+  
   
