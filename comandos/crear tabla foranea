@@ -1,0 +1,10 @@
+CREATE TABLE proveedor (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(60) NOT NULL,
+    fk_sku INT,
+    FOREIGN KEY(fk_sku) REFERENCES producto(sku)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id)
+);
+
+
