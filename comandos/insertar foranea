@@ -36,3 +36,9 @@ CREATE TABLE `proveedor` (
  );
  
  
+ INSERT INTO proveedor(nombre,sku)
+values('tata',
+(SELECT sku FROM producto WHERE nombre  = 'parrilla'));   
+
+
+
