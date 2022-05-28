@@ -1,3 +1,25 @@
+CREATE TABLE 'author' (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `author_name` varchar(255) DEFAULT NULL,
+ `author_email` varchar(255) DEFAULT NULL,
+ KEY `id` (`id`)
+ );
+
+
+CREATE TABLE `joke` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `joke_text` text,
+ `author_id` int(11) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `joke_ibfk_1` (`author_id`),
+ CONSTRAINT `joke_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+ );
+ 
+ 
+ INSERT INTO author(author_name, author_email)
+    VALUES('Famous Anthony', 'fam@fame.org');
+
+
 INSERT INTO joke(joke_text,author_id)
 values('tata',
 (SELECT id FROM author WHERE author_name  = 'Famous Anthony'));   
