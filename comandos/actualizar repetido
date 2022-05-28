@@ -1,0 +1,32 @@
+update producto
+set categoria = 'super2'
+WHERE categoria IN
+(
+    SELECT * FROM
+    (
+        SELECT max(categoria)
+        FROM producto
+        #GROUP BY relevant_field
+        #HAVING COUNT(*) > 1
+    ) AS subquery
+)
+;
+
+
+
+ Cambien la categoría de productos más popular por ‘Electrónica y computación’.
+
+
+update producto
+set categoria = 'super2'
+WHERE categoria IN
+(
+    SELECT * FROM
+    (
+        SELECT max(categoria)
+        FROM producto
+    ) AS subquery
+)
+;
+
+
