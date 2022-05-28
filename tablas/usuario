@@ -1,0 +1,11 @@
+CREATE TABLE usuario (
+    id_usuario int,
+    nombre varchar(255),
+    apellido varchar(255),
+    contraseña varchar(255),
+    genero ENUM('masculino', 'femenino'),
+	telefono VARCHAR (15),
+    zona_horaria timestamp,
+    PRIMARY KEY(id_usuario)
+);
+
