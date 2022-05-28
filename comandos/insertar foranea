@@ -24,3 +24,15 @@ INSERT INTO joke(joke_text,author_id)
 values('tata',
 (SELECT id FROM author WHERE author_name  = 'Famous Anthony'));   
 
+
+CREATE TABLE `proveedor` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `nombre` text,
+ `sku` int DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `proveedor_ibfk_1` (`sku`),
+ CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`sku`) REFERENCES `producto` (`sku`) 
+ ON DELETE SET NULL ON UPDATE CASCADE
+ );
+ 
+ 
