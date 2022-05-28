@@ -56,4 +56,18 @@ limit 1
 ;
 
 
+SELECT categoria
+FROM producto
+WHERE categoria IN
+(
+    SELECT * FROM
+    (
+        SELECT max(categoria)
+        FROM producto
+        #GROUP BY relevant_field
+        #HAVING COUNT(*) > 1
+    ) AS subquery
+)
+;
+
 
