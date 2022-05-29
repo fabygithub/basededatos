@@ -1,1 +1,5 @@
 
+
+INSERT INTO `platillo`(`nombre`,`precio`,`disponible`,`categoriaid`)
+values ('papas','5000','1','5');
+
