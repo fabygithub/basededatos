@@ -1,0 +1,4 @@
+select count(id) , categoriaid
+from platillo
+group by categoriaid
+order by count(id) desc;
