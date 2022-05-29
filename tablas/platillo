@@ -1,0 +1,9 @@
+CREATE TABLE platillo (
+    id int not null auto_increment,
+    nombre varchar(45),
+    precio int,
+    disponible int,
+    categoriaid int,
+    primary key(id)
+);
+
