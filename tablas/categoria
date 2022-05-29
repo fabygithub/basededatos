@@ -1,0 +1,5 @@
+CREATE TABLE categoria (
+    id int not null auto_increment,
+    nombre varchar(45),
+    primary key(id)
+);
