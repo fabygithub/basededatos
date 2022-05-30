@@ -1,3 +1,6 @@
 ALTER TABLE table_name 
 RENAME COLUMN old_column_name1 TO new_col_name1;
 
+ALTER TABLE capacitaciones_economicos 
+RENAME COLUMN costo_realizacion TO costo_efectivo;
+
