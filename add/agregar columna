@@ -1,0 +1,9 @@
+ALTER TABLE vendors
+ADD COLUMN phone VARCHAR(15)
+
+ALTER TABLE capacitaciones_economicos
+ADD COLUMN cantidad_minima_estudiante int;
+
+ALTER TABLE capacitaciones_economicos
+ADD COLUMN aportes_publicos int;
+
