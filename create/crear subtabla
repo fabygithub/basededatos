@@ -1,1 +1,7 @@
 
+CREATE TABLE capacitaciones_economicos 
+AS SELECT precio FROM capacitacion
+WHere  precio  <
+(SELECT avg (precio)
+FROM capacitacion);
+
