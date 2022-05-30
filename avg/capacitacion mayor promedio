@@ -1,0 +1,5 @@
+ELECT precio
+FROM capacitacion
+WHERE  precio  >
+(SELECT avg (precio)
+FROM capacitacion);
