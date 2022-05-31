@@ -1,0 +1,5 @@
+start transaction;
+INSERT INTO usuarios_especiales
+SELECT * FROM usuarios
+limit 2;
+rollback;
