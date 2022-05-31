@@ -1,0 +1,9 @@
+CREATE TABLE visitas(
+ id_visita int not null auto_increment,
+ id int,
+ cantidad_visitas int,
+ INDEX (id),
+ FOREIGN KEY (id) REFERENCES usuarios(id),
+ PRIMARY KEY (id_visita)
+);
+
