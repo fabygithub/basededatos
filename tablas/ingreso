@@ -1,0 +1,11 @@
+CREATE TABLE ingreso(
+ id_ingreso int not null auto_increment,
+ id_usuario int,
+ fecha_hora datetime,
+ INDEX (id_usuario),
+ FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+ PRIMARY KEY (id_ingreso)
+);
+
+
+
