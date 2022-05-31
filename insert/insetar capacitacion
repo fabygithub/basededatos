@@ -3,3 +3,7 @@ values ('diseño 2','2020-04-20');
 
 SET SQL_SAFE_UPDATES = 0;
 
+UPDATE operador SET  nombre = 'pedro' where apellido = 'fierro';
+UPDATE operador SET  nombre = 'jaime' where apellido = 'ponce';
+UPDATE operador SET  nombre = 'ignacio' where apellido = 'soto';
+
