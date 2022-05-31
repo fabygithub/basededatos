@@ -1,0 +1,13 @@
+INSERT INTO ingreso ( fecha_hora)
+VALUES (current_timestamp()),
+(current_timestamp()),
+(current_timestamp()),
+(current_timestamp()),
+(current_timestamp()),
+(current_timestamp()),
+(current_timestamp()),
+(current_timestamp())
+;
+
+
+
