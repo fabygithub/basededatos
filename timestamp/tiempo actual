@@ -5,3 +5,14 @@ INSERT INTO usuarios ( nombre , apellido , telefono , contraseña,
 genero, zona_horaria)
 VALUES ('pepo','contreras','+5634523','papa','male',current_timestamp());
 
+INSERT INTO usuarios ( nombre , apellido , telefono , contraseña, 
+genero, zona_horaria)
+VALUES ('pepo','contreras','+5634523','papa','male',current_timestamp()),
+('maria','contreras','+5634523','papa','male',current_timestamp()),
+('juan','contreras','+5634523','papa','male',current_timestamp()),
+('esteban','contreras','+5634523','papa','male',current_timestamp()),
+('matias','contreras','+5634523','papa','male',current_timestamp()),
+('sergio','contreras','+5634523','papa','male',current_timestamp()),
+('luciano','contreras','+5634523','papa','male',current_timestamp()),
+('pipo','contreras','+5634523','papa','male',current_timestamp())
+;
