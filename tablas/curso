@@ -1,0 +1,5 @@
+create table curso(
+   id int,
+   nombre varchar(45)
+);
+
