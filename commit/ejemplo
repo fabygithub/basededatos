@@ -23,8 +23,25 @@ Delete from Players where id = 7;
 
 ROLLBACK;
 
+SELECT * from players
 
 
+START TRANSACTION;
+insert into Players values(4, 'Virat', 'Kohli', DATE('1988-11-05'), 'Delhi', 'India');
+COMMIT;
+
+
+START TRANSACTION;
+insert into Players values(5, 'Rohit', 'Sharma', DATE('1987-04-30'), 'Nagpur', 'India');
+ROLLBACK;
+
+
+guardar el rollback
+
+START TRANSACTION;
+insert into Players values(5, 'Rohit', 'Sharma', DATE('1987-04-30'), 'Nagpur', 'India');
+ROLLBACK;
+commit;
 
 
 
