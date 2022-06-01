@@ -1,0 +1,5 @@
+ALTER TABLE bands MODIFY country_code VARCHAR(2);
+ALTER TABLE usuario MODIFY zona_horaria char(10);
+ALTER TABLE usuario MODIFY zona_horaria char(10) default 'UTC-3';
+
+
