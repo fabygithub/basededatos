@@ -1,0 +1,9 @@
+ALTER TABLE usuario MODIFY zona_horaria char(10) default 'UTC-3';   
+ALTER TABLE usuario alter column zona_horaria drop default; 
+ALTER TABLE usuario MODIFY zona_horaria char(10) default 'UTC-2'; 
+
+ALTER TABLE usuario alter column zona_horaria drop default;   
+describe usuario;
+ALTER TABLE usuario MODIFY zona_horaria char(10) default 'UTC-2';
+describe usuario;
+
