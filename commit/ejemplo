@@ -24,9 +24,6 @@ Delete from Players where id = 7;
 ROLLBACK;
 
 
-SELECT * FROM Players,
-ROLLBACK;
-
 
 
 
