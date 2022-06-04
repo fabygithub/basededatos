@@ -1,0 +1,5 @@
+select count(menus.menu_id), menu_categories.category_id
+from menus
+inner join menu_categories
+on menus.category_id = menu_categories.category_id
+group by menu_categories.category_name
