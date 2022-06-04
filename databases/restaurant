@@ -1,0 +1,25 @@
+contar las categorias
+
+select count(menus.menu_id), menu_categories.category_id
+from menus
+inner join menu_categories
+on menus.category_id = menu_categories.category_id
+group by menu_categories.category_name
+
+
+seleccionar todos los menus
+select * from menus
+
+
+seleccionar los precios distintos del menu
+select distinct menu_price from menus;
+
+
+ordenar precios
+select distinct menu_price from menus
+order by menu_price desc;
+
+
+
+
+
