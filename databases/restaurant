@@ -20,6 +20,17 @@ select distinct menu_price from menus
 order by menu_price desc;
 
 
+seleccionar un precio precio entre un rango
+select * from menus
+where menu_price
+between 8
+and 12
+
+seleccionar un menu con un nombre specifico
+
+select * from menus
+where menu_name
+like 'Ice Tea'
 
 
 
