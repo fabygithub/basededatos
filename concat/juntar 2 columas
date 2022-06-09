@@ -1,0 +1,6 @@
+select concat(menu_name,'',menu_description)
+from menus
+where concat(menu_name,'',menu_description)
+like 'Xincent Burger%' ;
+
+SELECT * FROM MENUS
