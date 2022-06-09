@@ -1,0 +1,4 @@
+select * from restaurant.menus
+where menu_name
+LIKE 'B%'
+
