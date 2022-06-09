@@ -1,4 +1,4 @@
-select concat(menu_name,'',menu_description)
+select concat(menu_name,'',menu_description) as Nombre_Completo
 from menus
 where concat(menu_name,'',menu_description)
 like 'Xincent Burger%' ;
