@@ -1,0 +1,3 @@
+select * from menus
+where menu_name
+LIKE 'B%'
