@@ -132,3 +132,45 @@ Select *
 from loginusuarios
 where usuario = 'Fernando'
 and contrasena = MD5('HOLA');
+
+
+
+DROP TABLE if EXISTS tiempo;
+CREATE TABLE tiempo(
+      idTiempo serial,
+      tiempo timestamp,
+      nombreEvento varchar(30)
+    );
+    
+    
+INSERT into 
+tiempo(nombreEvento)VALUES('AHORA');
+
+INSERT into 
+tiempo(nombreEvento)VALUES('AHORA DE NUEVO');
+SELECT * FROM tiempo;
+
+
+DELIMITER //
+CREATE PROCEDURE PR_EJEMPLO()
+BEGIN
+  SELECT * FROM tiempo;
+  SELECT * from producto;
+END;
+//
+
+
+CALL  PR_EJEMPLO();
+
+DROP PROCEDURE pr_ejemplo;
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS PR_EJEMPLO //
+CREATE PROCEDURE PR_EJEMPLO()
+BEGIN
+  SELECT* FROM producto;
+  SELECT* FROM proveedores;
+END;
+//
+CALL PR_EJEMPLO();
+
