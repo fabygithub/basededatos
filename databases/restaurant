@@ -38,3 +38,10 @@ SELECT * FROM MENUS
 where category_id
 in(2,3);
 
+seleccionar un menu con un precio y una categoria
+
+SELECT * FROM MENUS
+where menu_price = '3.20' 
+and category_id
+in(2,3);
+
