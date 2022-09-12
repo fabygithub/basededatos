@@ -1,1 +1,27 @@
+https://www.youtube.com/watch?v=roDbp0Kkazg&t=223s&ab_channel=YessicaYazminCalderonSegura
+
+3
+
+venta   utf8mb4 general ci
+
+Almacen      7
+
+id_compra int 10 primary
+Nombre_producto varchar 50
+Descripcion varchar 
+costo_compra  int
+
+
+6
+
+
+
+
+
+
+
+
+
+
+
 
