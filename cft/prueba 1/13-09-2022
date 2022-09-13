@@ -33,14 +33,16 @@ where id_usu = 1;
 
 
 delimiter //
-create procedure actualizar (in pnombre varchar(50), in papellido varchar (50),pid_usu int)
+create procedure actualizar (in pnombre varchar(50), in papellido varchar (50),pid int)
 begin
       update tbl_usuario
-      set nombre = (pnombre, apellido = papellido)
-      where id_usu = pid_usu;
-       
+      set nombre = pnombre, 
+      apellido = papellido
+      where id_usu = pid;      
 end
 //
+
+call actualizar('xxxxxx','yyyyy',5)
 
 
 
