@@ -1,0 +1,61 @@
+drop table tbl_usuario
+create database CURSO;
+create table tbl_usuario
+(
+id_usu int primary key auto_increment not null,
+nombre varchar(50),
+apellido varchar(50),
+fecha_ing timestamp default current_timestamp
+);
+
+insert into tbl_usuario(nombre,apellido) values
+('carlos','santana');
+
+describe tbl_usuario;
+select * from tbl_usuario;
+
+/*procedimiento almacenado para insertar*/
+
+delimiter //
+create procedure ingreso (in pnombre varchar(50), in papellido varchar (50))
+begin
+       INSET INTO tbl_usuario values(pnombre,papellido)
+       
+end
+//
+
+call ingreso('Miguel','De Cervantes');
+
+update tbl_usuario
+set nombre = ('Claudio', apellido = 'Castro')
+where id_usu = 1;
+
+
+
+delimiter //
+create procedure actualizar (in pnombre varchar(50), in papellido varchar (50),pid_usu int)
+begin
+      update tbl_usuario
+      set nombre = (pnombre, apellido = papellido)
+      where id_usu = pid_usu;
+       
+end
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
