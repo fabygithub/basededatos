@@ -1,0 +1,22 @@
+/* trigger para actualizar datos
+
+create trigger
+new.TEMATICA
+before update
+old coding
+
+
+create table actializa_libros(
+codigo_libro varchar(4),
+tematica  varchar(10),
+nombre_libro varchar(29),
+precio decimal,
+new_precio decimal,
+autor varchar (21),
+no_paginas INT,
+usuario varchar (30),
+fecha_registro datetime);
+
+
+
+
