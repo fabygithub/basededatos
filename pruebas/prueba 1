@@ -18,5 +18,6 @@ usuario varchar (30),
 fecha_registro datetime);
 
 
+cambiar condicion de solo lectura mysql
 
 
