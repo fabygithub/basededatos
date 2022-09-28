@@ -21,3 +21,12 @@ fecha_registro datetime);
 cambiar condicion de solo lectura mysql
 
 
+//could not acquire management access for administration
+hay que iniciar el servicio mysql80
+
+https://www.youtube.com/watch?v=kQIXDZO3ElA&ab_channel=EduenSarce%C3%B1o
+
+identity is not valid in this position
+IDENTITY is not valid input at this position, expecting: ')'
+
+
