@@ -29,4 +29,13 @@ hay que iniciar el servicio mysql80
 identity is not valid in this position
 IDENTITY is not valid input at this position, expecting: ')'
 
+// trigger
+
+DELIMITER //
+create trigger log_tabla_alumno after insert on alumno
+for each row begin
+    insert into acciones (accion) value ('Se creo un registro en alumno');
+    end;
+end //
+
 
