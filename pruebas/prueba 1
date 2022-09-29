@@ -39,3 +39,32 @@ for each row begin
 end //
 
 
+______________________________________________________
+
+
+DELIMITER //
+create trigger log_tabla_alumno after insert on alumno
+for each row begin
+    insert into acciones (accion) 
+    value (concat('Se creo un registro en alumno de nombre:',NEW.nombre,'y id:',NEW.id));
+    end;
+end //
+
+
+new sql tab
+
+drop trigger log_tabla_alumno;
+
+execute the statement under the keyboard cursor = rayo
+
+se hace el drop trigger 
+y despues se vuelve a crear el trigger
+
+
+
+
+
+
+
+
+
