@@ -1,6 +1,95 @@
 curso de mysql resumen
 https://www.youtube.com/playlist?list=PLCTD_CpMeEKQmH9cRKWWHahygZFtIdwYG
 
+https://www.tutorialesprogramacionya.com/mysqlya/temarios/descripcion.php?cod=68&punto=73&inicio=
+
+// tabla editorial mysql
+create table editorial;
+
+//modificar clave primaria
+ALTER TABLE editorial MODIFY COLUMN id_editorial varchar(10);
+
+telefono  mysql
+
+create table editorial(
+ id_editorial int auto_increment primary key,
+ nom_editorial varchar (100) not null,
+ direccion varchar (40) not null,
+ telefono varchar (40) not null,
+ email varchar (40) not null 
+);
+
+
+create table autor(
+ id_autor varchar(10) primary key,
+ nom_autor varchar (10) not null,
+ apat varchar (10) not null,
+ amat varchar(10) not null,
+ fecha_nac date ,
+ nacionalidad varchar (10) not null
+);
+
+
+create table libro(
+ id_libro varchar(10) primary key,
+ nom_libro varchar (20) not null,
+ categoria varchar (40) not null,
+ paginas int not null,
+ id_editorial varchar (10) not null,
+ id_autor varchar (10) not null 
+);
+
+
+//insertar editorial 
+
+insert into editorial values
+('ED_001','ALFAGUARA',	'EDIFICIO ', '99542312','ALFAGUARA@GMAIL.COM'),
+('ED_002','SANTILLANA','ANDRES BELLO 2209, SANTIAGO'	,'98745563'	,'SANTILLANA@GMAIL.COM'),
+('ED_003','PLANETA','BARROS ARANA 1524'	,'36568952','PLANETALIBROS@PLANETA.CL'),
+('ED_004','PRENTICE HALL','WENTIS 1489 MIAMI','888-232323',	'PRENTICEHALL@EDUCATION.COM'),
+('ED_005','MC GRAU HILL','CRAWFORD 2325, NEW YORK',	'564-874522','MCGRAU@HILL.COM');	
+
+
+insert into autor values
+('AU_111',	'GABRIELA', 'MISTRAL','MISTRAL','7-04-1889','CHILENA'),
+('AU_222',	'PABLO' ,'NERUDA','NERUDA',	'12-07-1904','CHILENA'),
+('AU_333',	'MARTA',	'BRUNET','CARAVES', '9-08-1897','CHILENA'),
+('AU_444',	'JOSE' ,	'DONOSO','YAÑEZ',	'05-10-1924','CHILENA'),
+('AU_555',	'MANUEL',	'ROJAS','SEPULVEDA',	'08-01-1896','CHILENA');
+
+
+
+//agregar clave foranea
+alter table libro add constraint fk_id_editorial foreign key (id_editorial)
+references editorial(id_editorial) on delete cascade on update cascade
+
+alter table libro add constraint fk_id_autor foreign key (id_autor)
+references autor(id_autor) on delete cascade on update cascade
+
+insert into libro values
+('LB_001',	'CIELO, MAR Y TIERRA', 	'POESIA',	'120',	'ED_002',	'AU_111'),
+('LB_002',	'CORONACION'	,'NOVELA'	,'350',	'ED_004','AU_444'),
+('LB_003',	'UNA HISTORIA CON DOS GATAS','	INFANTIL',	'200',	'ED_001','AU_333'),
+('LB_004',	'LANCHAS EN LA BAHIA', 'CUENTO','200',	'ED_005,''AU_555'),
+('LB_005',	'20 POEMAS DE AMOR','SONETOS Y POESIA','145', 'ED_003','AU_222');
+
+
+update autor set fecha =  '7-04-1889'  where id_autor = 'AU_111';
+update autor set fecha_nac =  '7-04-1889'  where id_autor = 'AU_111';
+update autor set fecha_nac =  1889-04-7  where id_autor = 'AU_111';
+
+update autor set fecha_nac =  '1889-04-7'  where id_autor = 'AU_111',
+update autor set fecha_nac = '1904-07-12'   where id_autor = 'AU_222',
+update autor set fecha_nac = '1897-08-9'  where id_autor = 'AU_333',
+update autor set fecha_nac = '1924-10-05'  where id_autor = 'AU_444',
+update autor set fecha_nac = '1896-01-08'  where id_autor = 'AU_555';
+
+
+
+//tabla libro  mysql
+//tabla autor  mysql
+
+
 
 // crear una conexion local
 
