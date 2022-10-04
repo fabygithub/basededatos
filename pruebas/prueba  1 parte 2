@@ -78,6 +78,9 @@ call alumnos_con_letra('j',@cantidad_j);
 select @cantidad_j;
 select @cantidad_j as alumnos_con_j;
 
+#funciones en mysql
+
+
 
 
 
