@@ -1,3 +1,22 @@
+//trigger tabla respaldo
+// copiar una tabla en mysql
+
+CREATE TABLE respaldo_update LIKE libro;
+CREATE TABLE respaldo_update LIKE tbl_libro;
+
+CREATE TABLE respaldo_insert LIKE tbl_editorial;
+
+
+// insertar nueva editorial
+
+
+create trigger insertar_editorial after insert on tbl_editorial
+for each row begin
+    insert into tbl_editorial (NOM_EDITORIAL) value ('perez');
+    end;
+
+
+
 /* trigger para actualizar datos
 
 create trigger
