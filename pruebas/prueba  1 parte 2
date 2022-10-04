@@ -1,11 +1,13 @@
+exportar la base de datos con xammp
+http://localhost/phpmyadmin/
+
 https://es.stackoverflow.com/questions/67858/procedimiento-almacenado-insertar-en-mysql
+
 // Crear un trigger Before Update 
 https://www.youtube.com/watch?v=8moLmKXQ0Hk
 
 create trigger actualizar_precio before update on tbl_libro for each row insert into nueva_categoria 
 (antigua_categoria) values(old.categoria,new.categoria);
-
-
 
 
 delimiter //
@@ -16,10 +18,6 @@ VALUES ('AU_200', 'GABRIELA', 'MISTRAL', 'MISTRAL', '1889-04-07', 'CHILENA');
 end //
 
 call insertar_autor();
-
-
-
-
 
 https://www.youtube.com/watch?v=J6SifVJTgd0&ab_channel=ProgramadorNovato
 
