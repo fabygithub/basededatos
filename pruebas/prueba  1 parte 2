@@ -1,0 +1,118 @@
+https://www.youtube.com/watch?v=J6SifVJTgd0&ab_channel=ProgramadorNovato
+
+trigger en mysql
+// accion es una columna de la tabla acciones
+(accion)
+
+delimiter //
+create trigger log_tabla_alumno after insert on alumno
+for each row begin
+    insert into acciones(accion) value('se creo un registro en alumno');
+end//
+delimiter;
+
+
+delimiter //
+create trigger log_tabla_alumno after insert on alumno
+for each row begin
+    insert into acciones(accion) 
+    value(concat('se creo un registro en alumno de nombre:' , NEW.nombre, ' y id: ' , NEW.id));
+end//
+delimiter;
+
+
+drop trigger log_tabla_alumno;
+
+
+procedimientos almacenados en mysql
+
+delimiter //
+create procedure alumnos_con_letra(in letra char)
+begin 
+select *
+from alumno
+where nombre like letra;
+end //
+delimiter;
+call alumnos_con_letra('j');
+
+
+delimiter //
+create procedure alumnos_con_letra(in letra char)
+begin 
+select *
+from alumno
+where nombre like concat('%',letra,'%');
+end //
+delimiter;
+call alumnos_con_letra('j');
+
+
+drop procedure alumnos_con_letra;
+
+delimiter //
+create procedure alumnos_con_letra(in letra char)
+begin 
+select count(*)
+from alumno
+where nombre like concat('%',letra,'%');
+end //
+delimiter;
+call alumnos_con_letra('j');
+
+
+#lo que se cuenta se agregar numero que es un parametro
+# despues de crea una columna @cantidad_j para llamar al numero
+# incluso hacien un as se puede volver a cambiar la columna 
+
+delimiter //
+create procedure alumnos_con_letra(in letra char,out numero int)
+begin 
+select count(*) into numero
+from alumno
+where nombre like concat('%',letra,'%');
+end //
+delimiter;
+call alumnos_con_letra('j',@cantidad_j);
+
+select @cantidad_j;
+select @cantidad_j as alumnos_con_j;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
