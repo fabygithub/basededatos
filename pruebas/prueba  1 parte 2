@@ -80,6 +80,11 @@ select @cantidad_j as alumnos_con_j;
 
 #funciones en mysql
 
+delimiter //
+create function numero_letras (letra Char) returns int
+
+Begin
+Declare número int;
 
 
 
