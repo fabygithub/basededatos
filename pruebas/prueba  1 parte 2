@@ -85,6 +85,19 @@ create function numero_letras (letra Char) returns int
 
 Begin
 Declare número int;
+Select count(*) into número from alumno where nombre like concat('%', letra, '%');
+Return número;
+End//
+Delimiter;
+
+Select numero_letras('j') ;
+
+Select left (nombre, 1) from alumnos;
+
+Select left (nombre, 1) as letra, numero_letras(left(nombre, 1)) as numero_alumnos_con_letra from alumnos;
+
+
+
 
 
 
