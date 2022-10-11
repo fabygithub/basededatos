@@ -1,0 +1,10 @@
+select * from autos.tbl.estilo
+id  num  observaciones
+
+create table tbl_estilo(id_estilo int auto_increment primary key)
+
+inset into tbl_moto (id moto,patente,cilindrado,velocidad_max,min,fk_id_marca, fk_id_combustible,fk_id_estilo)values
+('e1234','23-334','123 95','2020,01,12',1,2,3);
+
+select * from tbl_moto;
+
