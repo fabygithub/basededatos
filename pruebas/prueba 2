@@ -1,3 +1,9 @@
+https://www.youtube.com/watch?v=h-Ekjt9lFb4&ab_channel=JohnOrtizOrdo%C3%B1ez
+MySQL Ejercicio: 122 Definición de la Tabla autos para Almacenar Datos de una Concesionaria
+
+t:2
+
+
 select * from autos.tbl.estilo
 id  num  observaciones
 
@@ -7,4 +13,41 @@ inset into tbl_moto (id moto,patente,cilindrado,velocidad_max,min,fk_id_marca, f
 ('e1234','23-334','123 95','2020,01,12',1,2,3);
 
 select * from tbl_moto;
+
+tipo de dato - texto
+
+una concesonaria vende autos usados
+y almacena los datos de los autos - en la tabla autos
+
+elimine la tabla autos si existe
+cree la tabla con la siguiente estructura
+
+create table autos(
+  patente char(6),
+  marca varchar(20),
+  modelo char(4),
+  precio float unsigned,
+  primary key(patente)
+);
+
+inserte los siguientes registros
+
+insert into autos(patente,marca,modelo,precio)
+values('acd123','fiat 128','1970','15000');
+
+//elimina la tabla autos si existe
+drop table if exists autos;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
