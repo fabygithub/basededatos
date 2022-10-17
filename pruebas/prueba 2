@@ -40,6 +40,12 @@ drop table if exists autos;
 
 
 
+tbl marca
+tbl_combustible
+tbl_estilo
+tbl_moto1
+tbl_pago
+tbl_arriendo
 
 
 
