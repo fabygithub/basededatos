@@ -47,6 +47,91 @@ tbl_moto1
 tbl_pago
 tbl_arriendo
 
+18-10-2022
+
+create database bbdd_motos;
+
+create table tbl_marca(
+id_marca int auto_increment primary key,
+nom_marca varchar(20) not null, 
+pais varchar(20) not null,
+observaciones varchar(50) not null
+);
+
+create table tbl_combustible(
+id_comb int(11) auto_increment primary key,
+nom_comb varchar(20) not null,
+observaciones varchar(50) not null
+);
+
+create table tbl_estilo(
+ id_estilo int(11) auto_increment primary key,
+ nom_estilo varchar(20) not null,
+ observaciones varchar(30) not null
+);
+
+create table tbl_pago(
+id_pago int(11) auto_increment primary key,
+nom_pago varchar(20) not null,
+observacion varchar(30) not null
+);
+
+create table tbl_clientes(
+id_clie varchar(10) primary key,
+nom_clie varchar(20)not null,
+apat varchar(20)not null,
+amat varchar(20)not null,
+direccion varchar(30)not null,
+telefono varchar(15) not null
+);
+
+create table tbl_arriendo(
+id_arriendo int(11)auto_increment primary key,
+fec_inc_arr datetime,
+fec_ter_arr datetime,
+kl_ini varchar(6)not null,
+kl_fin varchar(6)not null,
+fk_id_moto varchar(15)not null,
+fk_id_pago int(11)not null,
+fk_id_clie varchar(10)not null
+);
+
+create table tbl_moto1(
+id_moto varchar(15)primary key,
+patente varchar(10)not null,
+cilindrada varchar(10) not null,
+velocidad_max varchar(20) not null,
+anio date,
+id_marca int(11)not null,
+id_comb int(11)not null,
+id_estilo int(11)not null
+);
+
+alter table tbl_moto1 add constraint fk_id_marca foreign key (id_marca) 
+references tbl_marca(id_marca) on delete cascade on update cascade;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
