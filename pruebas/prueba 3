@@ -1,0 +1,32 @@
+primero procedure
+
+
+
+
+vistas o view
+create view
+vistas-productos-basicos as
+
+select * from productos
+where id=5;
+
+
+********************** creacion de vistas *************************************
+
+create view
+vista_Consulta_Clientes as
+select * id_cliente as ID,nom_clie asNombre,
+Apat as Apellido_Pat,
+Amat as Apellido_Mat
+from tblClientes
+
+select * from vista_consulta_clientes;
+where id  = "111111111-1"
+
+
+
+
+
+
+
+
