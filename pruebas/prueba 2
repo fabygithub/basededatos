@@ -111,6 +111,30 @@ alter table tbl_moto1 add constraint fk_id_marca foreign key (id_marca)
 references tbl_marca(id_marca) on delete cascade on update cascade;
 
 
+#no haya duda
+#codigo base de datos workbench
+#me cre la base de datos
+
+
+copiar el txt
+#rodiguez.txt
+
+#importa o exporta desde xamp es difenrete
+#xamp admin
+#ubicar base de datos
+#exportar
+#formato sql
+#base exportada
+
+****creacion de tablas **************
+7 tablas
+****insercion de datos a tabla ******
+7 tablas
+****claves foraneas******************
+3 tablas
+
+
+
 
 
 
