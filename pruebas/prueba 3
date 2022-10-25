@@ -33,8 +33,7 @@ where id  = "111111111-1"
 #inner join  on 
 #clave primaria y clave foranea
 #idcliente = fk idcliente de la tabla arriendo
-
-
+#3 triggers en diferente tablas
 
 
 
