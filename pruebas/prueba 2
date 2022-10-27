@@ -163,7 +163,19 @@ se debe a que falta el from cliente
 aca se necesita un inner join para obtener el nombre del cliente
 y unirlo a la tabla arriendo para hacer el inner
 
+### error incorrect datetime value ####
+mysql datetime
+'2022-10-27'
 
+#### cannot update a child row ######
+se tiene que ingresar el mismo valor de la tabla foranea
+no se puede cambiar la clave primaria
+tambien se puede deber a que no se ingresado valores en la tabla principal
+y se intenta ingresar primero en la tabla hija
+
+### 1054 #################
+la columna no existe
+ejemplo fk_id_pago on clause
 
 
 
