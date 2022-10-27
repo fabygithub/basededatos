@@ -3,9 +3,12 @@ MySQL Ejercicio: 122 Definición de la Tabla autos para Almacenar Datos de una C
 
 t:2
 
+###### ejemplo seleccionar tabla ###########
 
 select * from autos.tbl.estilo
 id  num  observaciones
+
+###### ejemplo para crear tabla ############
 
 create table tbl_estilo(id_estilo int auto_increment primary key)
 
@@ -19,7 +22,8 @@ tipo de dato - texto
 una concesonaria vende autos usados
 y almacena los datos de los autos - en la tabla autos
 
-elimine la tabla autos si existe
+####### elimine la tabla autos si existe ######
+drop table autos; 
 cree la tabla con la siguiente estructura
 
 create table autos(
@@ -31,13 +35,13 @@ create table autos(
 );
 
 inserte los siguientes registros
+######### ejemplo para insertar datos ############
 
 insert into autos(patente,marca,modelo,precio)
 values('acd123','fiat 128','1970','15000');
 
 //elimina la tabla autos si existe
 drop table if exists autos;
-
 
 
 tbl marca
@@ -48,6 +52,8 @@ tbl_pago
 tbl_arriendo
 
 18-10-2022
+
+######### ejemplo creacion de base de datos ###########
 
 create database bbdd_motos;
 
@@ -107,6 +113,9 @@ id_comb int(11)not null,
 id_estilo int(11)not null
 );
 
+
+######### ejemplo creacion de clave foranea ########################
+
 alter table tbl_moto1 add constraint fk_id_marca foreign key (id_marca) 
 references tbl_marca(id_marca) on delete cascade on update cascade;
 
@@ -140,10 +149,10 @@ cuando es auto increment el id se agrega solo
 
 ##### ingresar 8 marcas ###########
 
-###### insert especial ##########
+###### insertar especial ##########
 se puede insertar dejando una linea comentada
 
-######### insert estilos #############
+######### insertar estilos #############
 ingresar 5 estilos de motos
 
 
