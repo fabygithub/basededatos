@@ -111,6 +111,8 @@ alter table tbl_moto1 add constraint fk_id_marca foreign key (id_marca)
 references tbl_marca(id_marca) on delete cascade on update cascade;
 
 
+
+
 #no haya duda
 #codigo base de datos workbench
 #me cre la base de datos
@@ -132,6 +134,21 @@ copiar el txt
 7 tablas
 ****claves foraneas******************
 3 tablas
+
+### auto increment #######
+cuando es auto increment el id se agrega solo
+
+##### ingresar 8 marcas ###########
+
+###### insert especial ##########
+se puede insertar dejando una linea comentada
+
+######### insert estilos #############
+ingresar 5 estilos de motos
+
+
+
+
 
 
 
