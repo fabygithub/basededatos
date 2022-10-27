@@ -155,6 +155,19 @@ se puede insertar dejando una linea comentada
 ######### insertar estilos #############
 ingresar 5 estilos de motos
 
+###### ejemplo row 6 #############
+seria la fila 6 en los values del insert into
+
+#### ejemplo error 1054 columna desconocida  ##########
+se debe a que falta el from cliente  
+aca se necesita un inner join para obtener el nombre del cliente
+y unirlo a la tabla arriendo para hacer el inner
+
+
+
+
+
+
 
 
 
