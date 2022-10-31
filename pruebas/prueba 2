@@ -177,6 +177,15 @@ y se intenta ingresar primero en la tabla hija
 la columna no existe
 ejemplo fk_id_pago on clause
 
+https://www.javatpoint.com/mysql-after-insert-trigger#:~:text=The%20AFTER%20INSERT%20trigger%20syntax,clause%20to%20invoke%20the%20trigger.
+
+####### creacion de tabla de respaldo
+####### creacion de trigger 
+####### trigger after insert
+
+
+
+
 
 
 
