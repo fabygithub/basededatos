@@ -119,4 +119,33 @@ minimo siete registros por tabla.
 
 Las dudas que se generen deberan ser comunicadas 
 al su docente en el menor tiempo posible.
+investigar
+buscar en todas la fuentes
+http://www.cs.us.es/cursos/bd-2001/practicas/practica8.html
+copiar imagen de excel e insertarla 
+
+
+
+CREATE TABLE libro(
+libro NUMBER(5) PRIMARY KEY,
+titulo CHAR(30) NOT NULL,
+autor CHAR(30),
+numpag NUMBER(4));
+CREATE TABLE socio(
+socio NUMBER(5) PRIMARY KEY,
+nombre CHAR(30) NOT NULL,
+telefono CHAR(10),
+falta DATE);
+
+CREATE TABLE prestamo(
+libro NUMBER(5) NOT NULL,
+socio NUMBER(5) NOT NULL,
+fprestamo DATE NOT NULL,
+fdevolucion DATE,
+PRIMARY KEY (libro,socio,fprestamo),
+FOREIGN KEY (libro) REFERENCES libro,
+FOREIGN KEY (socio) REFERENCES socio);
+
+
+
 
