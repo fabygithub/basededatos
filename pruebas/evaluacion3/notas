@@ -146,6 +146,43 @@ PRIMARY KEY (libro,socio,fprestamo),
 FOREIGN KEY (libro) REFERENCES libro,
 FOREIGN KEY (socio) REFERENCES socio);
 
+15-11-2022
+
+que tiene que ver  el stock con el usuario
+ir analizando cada situacion
+si uno entrega todo hecho uno no va poder crear la base de datos
+prestar libros
+no se va a generar funcionalmente
+codigo php
+veririficar si el libro existe y si hay
+
+tabla ingresos
+generar boleta
+antes de vender consultar a stock
+
+ver las instrucciones
+mandar lo que tenga
+generar formulario con php
+seria bueno
+pudiesen crear un pequeño formulario
+para ingresar el autor
+este tipo de trabajo
+es el codigo de mantenedores
+
+base de datos colegio
+cambian las tablas
+la estructura es la misma
+lo va mejorando
+va filtrando
+el boton llaman los procedimientos
+el boton lo anida al codigo con procedimientos almacenidaos
+reutilizar codigo
+hacer 1 vez y no volver a hacer el codigo
+
+unico cambio 
+inserte una session
+revision de los avances
+
 
 
 
