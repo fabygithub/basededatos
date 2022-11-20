@@ -183,6 +183,14 @@ unico cambio
 inserte una session
 revision de los avances
 
+20-11-2022
+
+usar una base de datos anterior
+y cambiar algunas cosas
+guardar como archivo sql
+editar con notepad++
+o abrir en mysql workbench
+la claves foraneas sirven para ver como se relacionan las tablas
 
 
 
