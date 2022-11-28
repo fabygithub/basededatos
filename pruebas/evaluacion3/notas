@@ -236,6 +236,21 @@ el datetime  : se deberia ingresar en un formato correcto
 año : mes : dia
 '1889-11-01'
 
+28-11-2022
+una opcion es ejecutar por partes
+por ejemplo:
+
+todos los create
+todos los alter
+
+Error 1826: Duplicate foreign key constraint name, Necesito que puedan ayudarme a ver de donde procede el error
+el nombre de la clave foranea esta duplicado en 2 tablas
+
+la tabla editorial no tiene valor por defecto por ejemplo int autoincrement
+las columnas no coinciden con los valores
+
+
+
 
 
 
