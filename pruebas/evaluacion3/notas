@@ -249,7 +249,12 @@ el nombre de la clave foranea esta duplicado en 2 tablas
 la tabla editorial no tiene valor por defecto por ejemplo int autoincrement
 las columnas no coinciden con los valores
 
+ver todos los insert
+con doble clic puedes seleccionar la base de datos
+cuando aparece row 1 puede ser que en la parte de values se inserto mal el valor
 
+caundo se ingresa un valor en la tabla hija
+tiene que ser el mismo valor de la tabla padre no se puede cambiar
 
 
 
