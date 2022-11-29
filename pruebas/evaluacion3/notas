@@ -237,6 +237,7 @@ año : mes : dia
 '1889-11-01'
 
 28-11-2022
+
 una opcion es ejecutar por partes
 por ejemplo:
 
@@ -250,7 +251,7 @@ la tabla editorial no tiene valor por defecto por ejemplo int autoincrement
 las columnas no coinciden con los valores
 
 ver todos los insert
-con doble clic puedes seleccionar la base de datos
+con doble click puedes seleccionar la base de datos
 cuando aparece row 1 puede ser que en la parte de values se inserto mal el valor
 
 caundo se ingresa un valor en la tabla hija
